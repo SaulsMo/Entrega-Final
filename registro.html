@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuario</title>
+    <link rel="stylesheet" href="css/style_registro.css">
+</head>
+<body>
+    <div class="container">
+        <div class="profile-pic">
+            <img id="profilePic" src="recursos/icon-default.png" alt="Foto de perfil">
+            <input type="file" id="fileInput" accept="image/*">
+        </div>
+        <br>
+        <hr>
+        <br>
+        <form id="registerForm">
+            <label><center>Nombre(s)</center></label>
+            <input type="text" placeholder="Ingresa tu Nombre">
+<br>
+<hr>
+<br>
+            <div class="input-group">
+                <div>
+                    <label><center>Apellido Paterno</center></label>
+                    <input type="text" placeholder="Ingresa tu apellido paterno">
+                </div>
+                <div>
+                    <label><center>Apellido Materno</center></label>
+                    <input type="text" placeholder="Ingresa tu apellido materno">
+                </div>
+            </div>
+            <br>
+            <hr>
+            <br>
+            <label><center>Sexo</center></label>
+            <select>
+                <option value="">Selecciona tu sexo</option>
+                <option value="masculino">Masculino</option>
+                <option value="femenino">Femenino</option>
+            </select>
+            <br>
+            <hr>
+            <br>
+            <label><center>Fecha de Nacimiento</center></label>
+            <input type="date">
+            <br>
+            <hr>
+            <br>
+            <label><center>Rol de Usuario</center></label>
+            <div class="role-buttons">
+                <button type="button" class="role-btn user">Usuario</button>
+                <button type="button" class="role-btn admin">Administrador</button>
+            </div>
+            <br>
+            <hr>
+            <br>
+            <label><center>Correo Electronico @</center></label>
+            <div class="input-group">
+                <!-- <span class="icon">@</span> -->
+                <input type="email" placeholder="Ingresa tu correo electrónico">
+            </div>
+            <br>
+            <hr>
+            <br>
+            <label><center>Nombre de Usuario</center></label>
+            <input type="text" placeholder="Ingresa un nombre de usuario">
+            <br>
+            <hr>
+            <br>
+            <label><center>Contraseña</center></label>
+            <input type="password" placeholder="********">
+            <br>
+            <hr>
+            <br>
+            <button type="submit" class="register-btn">Crear usuario</button>
+        </form>
+    </div>
+
+    <script src="javascript/script_registro.js"></script>
+</body>
+</html>

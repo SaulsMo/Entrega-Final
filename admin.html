@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil de Administrador</title>
+  <link rel="stylesheet" href="css/style _admin.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <h2>Menú</h2>
+      <nav>
+        <ul>
+          <li><a href="perfil.html">Perfil</a></li>
+          <li><a href="publicaciones.html">Publicaciones</a></li>
+          <li><a href="chat.html">Chat</a></li>
+          <li><a href="conocenos.html" target="_blank">Conócenos</a></li>
+        </ul>
+      </nav>
+      <button class="logout-button" onclick="window.location.href='index.html'">Cerrar sesión</button>
+    </aside>
+
+    <main class="content">
+      <header id="adminProfile" class="admin-data">
+        <img src="recursos/lois.jpeg" alt="Avatar del administrador" class="avatar">
+        <h1>Administrador: Lois Wilkerson</h1>
+        <p><strong>Edad:</strong> 45 años</p>
+        <p><strong>Email:</strong> lois.wilker77@gmail.com</p>
+        <p><strong>Ubicación:</strong> Nuevo Leon, Mexico</p>
+        <p><strong>Biografía:</strong> Administradora experimentada con pasión por la comunidad y la moderación.</p>
+      </header>
+
+      <section id="pendingPosts" class="pending-posts">
+        <h2>Publicaciones Pendientes</h2>
+        <ul id="postQueue">
+          <!-- Las publicaciones pendientes aparecerán aquí -->
+        </ul>
+      </section>
+    </main>
+  </div>
+
+  <script src="javascript/script_admin.js"></script>
+</body>
+</html>

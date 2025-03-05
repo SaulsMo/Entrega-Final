@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-image: url("../recursos/landingPage.jpg");
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir toda la pantalla */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    width: 40%;
+    height: 90%;
+    max-width: 400px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.login-box, .welcome-box {
+    padding: 30px;
+    flex: 1;
+}
+
+.login-box {
+    background: #e3f2fd;
+    border-right: 2px solid #90caf9;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 15px;
+}
+
+.input-group .icon {
+    padding: 5px 10px;
+    color: gray;
+}
+
+input {
+    border: none;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+}
+
+.remember {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+button {
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+.register-text {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.register-text a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.register-text a:hover {
+    text-decoration: underline;
+}
+
+.btn-Inicio{
+    text-decoration: none;
+    font-size: 20px;
+    color: #000000;
+}
+
+.btn-Inicio:visited{
+    text-decoration: none;
+    font-size: 20px;
+    color: #000;
+}
+
+/* AQUI VIENE TODO LO DEL MENSAJE DE LA CONTRASEÑA */
+/* Estilo para el enlace de "Olvidaste tu contraseña" */
+#forgot-password {
+    text-decoration: underline;
+    cursor: pointer;
+    color: #007bff;
+}
+
+/* Estilo para el formulario emergente */
+#reset-password-form {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+#reset-password-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+#send-reset-link {
+    background-color: #007bff;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#send-reset-link:hover {
+    background-color: #0056b3;
+}
+
+/* AQUI VIENE TODO LO DEL MENSAJE DE LA CONTRASEÑA */

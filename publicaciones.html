@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Publicaciones</title>
+    <link rel="stylesheet" href="css/style_publicaciones.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <h1>Red Social</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="publicaciones.html">Publicaciones</a></li>
+                <li><a href="chat.html">Chat</a></li>
+                <li><a href="perfil.html">Perfil</a></li>
+                <li><a href="index.html">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Filtros de ordenación -->
+    <div class="filters">
+        <select id="filterSelect" onchange="applyFilter()">
+            <option value="date-new">Fecha: Más Reciente</option>
+            <option value="date-old">Fecha: Más Antiguo</option>
+            <option value="likes-high">Likes: Más Likes</option>
+            <option value="likes-low">Likes: Menos Likes</option>
+        </select>
+    </div>
+
+    <!-- Contenedor de publicaciones -->
+    <div class="container" id="postContainer">
+        <!-- Publicación 1 (Texto) -->
+        <div class="post" data-date="2025-02-21T12:00:00" data-likes="0">
+            <div class="post-header">
+                <img src="recursos/malcolm.webp" alt="Usuario">
+                <div>
+                    <strong>Malcolm666</strong><br>
+                    <span class="time">Hace 1 hora</span><br>
+                    <span class="date">21 de Febrero, 2025</span> <!-- Fecha de publicación -->
+                </div>
+            </div>
+            <p>¡Hoy me siento genial! ¿Qué planes tienen para el fin de semana?</p>
+            <div class="like-section">
+                <img src="recursos/like.png" 
+                    alt="Like" class="like-button" onclick="incrementLikes('like1')">
+                <span id="like1" class="like-count">0</span>
+            </div>
+        </div>
+
+        <!-- Publicación 2 (Texto y Foto) -->
+        <div class="post" data-date="2025-02-20T08:00:00" data-likes="2">
+            <div class="post-header">
+                <img src="recursos/hal.webp" alt="Usuario">
+                <div>
+                    <strong>HalLover777</strong><br>
+                    <span class="time">Hace 2 horas</span><br>
+                    <span class="date">20 de Febrero, 2025</span> <!-- Fecha de publicación -->
+                </div>
+            </div>
+            <p>Pasando un buen rato con la familia en el parque.</p>
+            <img src="recursos/malcolmpublifacion.avif" alt="Imagen de la publicación">
+            <div class="like-section">
+                <img src="recursos/like.png" 
+                    alt="Like" class="like-button" onclick="incrementLikes('like2')">
+                <span id="like2" class="like-count">2</span>
+            </div>
+        </div>
+
+        <!-- Publicación 3 (Solo Foto) -->
+        <div class="post" data-date="2025-02-19T06:30:00" data-likes="1">
+            <div class="post-header">
+                <img src="recursos/lois.jpeg" alt="Usuario">
+                <div>
+                    <strong>LoisBitchy69</strong><br>
+                    <span class="time">Hace 3 horas</span><br>
+                    <span class="date">19 de Febrero, 2025</span> <!-- Fecha de publicación -->
+                </div>
+            </div>
+            <img src="recursos/loisfoto.jpg" alt="Imagen de la publicación">
+            <div class="like-section">
+                <img src="recursos/like.png" 
+                    alt="Like" class="like-button" onclick="incrementLikes('like3')">
+                <span id="like3" class="like-count">1</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="javascript/script_publicaciones.js"></script>
+</body>
+</html>

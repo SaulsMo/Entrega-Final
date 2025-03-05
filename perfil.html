@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil de Usuario</title>
+  <link rel="stylesheet" href="css/style _perfil.css">
+  <style>
+    .custom-file-input {
+      display: none;
+    }
+    .custom-file-label {
+      display: inline-block;
+      padding: 8px 12px;
+      background-color: #3498db;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <h2>Menú</h2>
+      <nav>
+        <ul>
+          <li><a href="perfil.html">Perfil</a></li>
+          <li><a href="publicaciones.html">Publicaciones</a></li>
+          <li><a href="chat.html">Chat</a></li>
+          <li><a href="conocenos.html" target="_blank">Conócenos</a></li>
+        </ul>
+      </nav>
+      <button class="logout-button" onclick="window.location.href='index.html'">Cerrar sesión</button>
+    </aside>
+
+    <main class="content">
+      <header id="profile" class="user-data">
+        <img src="recursos/malcolm.webp" alt="Avatar del usuario" class="avatar">
+        <h1>Juan Pérez</h1>
+        <p><strong>Edad:</strong> 28 años</p>
+        <p><strong>Email:</strong> juanperez@example.com</p>
+        <p><strong>Ubicación:</strong> Ciudad de México, México</p>
+        <p><strong>Biografía:</strong> Amante de la tecnología y la programación. Me encanta viajar y descubrir nuevas culturas.</p>
+      </header>
+
+      <section id="createPost" class="post-creation">
+        <h2>Crear una publicación</h2>
+        <textarea id="postContent" maxlength="70" placeholder="Escribe algo (máximo 70 caracteres)..."></textarea>
+        <input type="file" id="postImage" accept="image/*">
+        <button id="submitPost">Enviar publicación</button>
+        <p id="statusMessage"></p>
+      </section>
+
+      <section id="approvedPosts" class="user-posts">
+        <h2>Mis publicaciones (Aprobadas)</h2>
+        <p id="postCounter">Total de publicaciones aprobadas: 0</p>
+        <ul id="approvedPostsList">
+          <!-- Las publicaciones aprobadas aparecerán aquí -->
+        </ul>
+      </section>
+    </main>
+  </div>
+
+  <footer class="audio-footer">
+    <h4>Ponle música a tu Perfil</h4>
+    <div class="audio-controls">
+      <label for="audioFile" class="custom-file-label">Elegir canción</label>
+      <input type="file" id="audioFile" class="custom-file-input" accept="audio/*">
+      <button id="playPause">Play</button>
+      <input type="range" id="progress" value="0" step="1">
+    </div>
+    <audio id="audio" style="display: none;"></audio>
+  </footer>
+
+  <script>
+    const audio = document.getElementById("audio");
+    const audioFile = document.getElementById("audioFile");
+    const playPauseButton = document.getElementById("playPause");
+    const progress = document.getElementById("progress");
+
+    audioFile.addEventListener("change", function() {
+      const file = audioFile.files[0];
+      if (file) {
+        const fileURL = URL.createObjectURL(file);
+        audio.src = fileURL;
+        audio.play();
+        playPauseButton.textContent = "Pause";
+      }
+    });
+
+    playPauseButton.addEventListener("click", function() {
+      if (audio.paused) {
+        audio.play();
+        playPauseButton.textContent = "Pause";
+      } else {
+        audio.pause();
+        playPauseButton.textContent = "Play";
+      }
+    });
+
+    audio.addEventListener("timeupdate", function() {
+      progress.value = (audio.currentTime / audio.duration) * 100;
+    });
+
+    progress.addEventListener("input", function() {
+      audio.currentTime = (progress.value / 100) * audio.duration;
+    });
+  </script>
+
+  <script src="javascript/script_perfil.js"></script>
+</body>
+</html>
