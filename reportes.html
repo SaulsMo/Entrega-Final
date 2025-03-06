@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportes</title>
+    <link rel="stylesheet" href="/css/style_reportes.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+          <h2>Menú</h2>
+          <nav>
+            <ul>
+              <li><a href="admin.html">Perfil</a></li>
+              <li><a href="reportes.html">Reportes</a></li>
+              <li><a href="conocenos.html" target="_blank">Conócenos</a></li>
+            </ul>
+          </nav>
+          <button class="logout-button" onclick="window.location.href='index.html'">Cerrar sesión</button>
+        </aside>
+
+        <main class="content">
+            <h2>Reportes</h2>
+            <div class="search-container">
+                <input type="text" id="search" placeholder="Buscar reporte..." onkeyup="filtrarReportes()">
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Publicación</th>
+                        <th>Fecha</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody id="reportes-list">
+                    <!-- Los reportes se generarán dinámicamente aquí -->
+                </tbody>
+            </table>
+        </main>
+    </div>
+
+    <script src="javascript/script_reportes.js"></script>
+</body>
+</html>

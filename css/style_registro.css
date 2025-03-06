@@ -94,9 +94,25 @@ input, select {
     color: white;
 }
 
+.user:hover{
+    background-color: #208afb;
+}
+
+.user:active{
+    background-color: #003063;
+}
+
 .admin {
     background: #ff4500;
     color: white;
+}
+
+.admin:hover{
+    background-color: #fc5d24;
+}
+
+.admin:active{
+    background-color: #a22b00;
 }
 
 .register-btn {
