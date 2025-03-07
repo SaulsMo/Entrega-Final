@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reportes</title>
-    <link rel="stylesheet" href="/css/style_reportes.css">
+    <link rel="stylesheet" href="css/style_reportes.css">
 </head>
 <body>
     <div class="container">
@@ -25,6 +25,7 @@
             <div class="search-container">
                 <input type="text" id="search" placeholder="Buscar reporte..." onkeyup="filtrarReportes()">
             </div>
+            <button class="download-button" onclick="descargarTabla('reportes-list', 'Reportes')">Descargar Reportes</button>
             <table>
                 <thead>
                     <tr>
@@ -35,11 +36,37 @@
                         <th>Estado</th>
                     </tr>
                 </thead>
-                <tbody id="reportes-list">
-                    <!-- Los reportes se generarán dinámicamente aquí -->
-                </tbody>
+                <tbody id="reportes-list"></tbody>
             </table>
-        </main>
+        
+            <h2>Cantidad de Post Registrados</h2>
+            <button class="download-button" onclick="descargarTabla('cantidad-posts', 'Cantidad_Posts')">Descargar Posts</button>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID Usuario</th>
+                        <th>Nombre</th>
+                        <th>Número de Publicaciones</th>
+                    </tr>
+                </thead>
+                <tbody id="cantidad-posts"></tbody>
+            </table>
+        
+            <h2>Cantidad de Usuarios Registrados</h2>
+            <button class="download-button" onclick="descargarTabla('cantidad-usuarios', 'Usuarios_Registrados')">Descargar Usuarios</button>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID Usuario</th>
+                        <th>Nombre de Usuario</th>
+                        <th>Nombre Real</th>
+                        <th>Fecha de Registro</th>
+                    </tr>
+                </thead>
+                <tbody id="cantidad-usuarios"></tbody>
+            </table>
+        </main>        
+        
     </div>
 
     <script src="javascript/script_reportes.js"></script>

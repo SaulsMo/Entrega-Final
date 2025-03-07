@@ -6,7 +6,7 @@
 }
 
 body {
-    background: #dfeeff;
+    background: #2c3e50;
     display: flex;
     justify-content: center;
     align-items: flex-start; /* Alinea el contenido al inicio de la pantalla */
@@ -16,7 +16,7 @@ body {
 }
 
 .container {
-    background: #e9f2fd;
+    background: #cfdef3;
     padding: 40px;
     width: 70%; /* Aumentamos aún más el ancho del formulario */
     max-width: 900px; /* Mayor tamaño máximo */
@@ -94,25 +94,9 @@ input, select {
     color: white;
 }
 
-.user:hover{
-    background-color: #208afb;
-}
-
-.user:active{
-    background-color: #003063;
-}
-
 .admin {
     background: #ff4500;
     color: white;
-}
-
-.admin:hover{
-    background-color: #fc5d24;
-}
-
-.admin:active{
-    background-color: #a22b00;
 }
 
 .register-btn {
