@@ -7,8 +7,8 @@ document.getElementById("submitPost").addEventListener("click", function() {
 
     // Obtener la imagen de perfil y nombre del usuario
     const profilePic = document.querySelector(".avatar").src;
-    const userName = "Juan Pérez";  // Reemplázalo con datos dinámicos si usas autenticación
-    const userLastName = "Gómez"; // Apellido del usuario
+    const userName = "Juan Pérez";
+    const userLastName = "Gómez";
 
     if (postContent === "" && !postImage) {
         statusMessage.textContent = "Debes escribir algo o subir una imagen.";
